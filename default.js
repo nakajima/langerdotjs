@@ -1,6 +1,6 @@
 jQuery(function() {
   var pattern;
-  pattern = /((http|ftp|https):\/\/)?[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/;
+  pattern = /([-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4})+\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)+/;
   if (pattern.test(window.location.pathname)) {
     var url = pattern.exec(window.location.pathname)[0];
     if (url.indexOf('http') == 0) {
